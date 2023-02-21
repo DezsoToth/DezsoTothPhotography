@@ -1,0 +1,1323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
+:root {
+    --main-black: #171717;
+    --main-white: #ffffff;
+    --main-grey: #aeadad;
+    --main-darkgrey: #343434;
+}
+
+html {
+    min-width: 410px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-black);
+}
+
+header {
+    overflow: hidden;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../assets/iceland_mounts.jpg);
+    background-size: cover;
+    min-height: 850px;
+    height: auto;
+    text-decoration: none;
+}
+
+.header-div-left, 
+.header-div-right, 
+.header-div-middle, 
+.header-div-title {
+    display: flex;
+    width: auto;
+    height: 60px;
+    margin: 40px 0;
+    padding: 5px;
+    color: var(--main-white);
+    font-size: 1rem;
+    font-weight: 200;
+   
+        
+}
+.header-div-left {
+    margin-left: 40px;
+    width: 300px;
+    gap: 25px;
+}
+
+.header-div-right {
+    margin-right: 40px;
+    justify-content: flex-end;
+    width: 300px;
+    gap: 25px;
+}
+
+.header-div-middle {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.header-span {
+    font-size: 1.4rem;
+}
+
+.middle {
+    /* display: block; */
+    line-height: 5;
+    font-size: 1.5rem;
+}
+
+.header-a {
+    text-decoration: none;
+    color: var(--main-white);
+    transition: color .5s;
+    font-size: 1.2rem;
+}
+
+.header-a:hover {
+    
+    color: var(--main-grey);
+}
+
+.header-title {
+    font-size: 2.7rem;
+    line-height: 1.2;
+}
+
+
+/*    MAIN    */
+
+
+.about-container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-black);
+}
+  
+.about-text {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 70px;
+    align-items: flex-start;
+    line-height: 3rem;
+}
+
+.image-container {
+    min-height: 800px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.about-img {
+    background-image: url(../assets/portrait_self.JPG);
+    min-height: 800px;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: 1.5s;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-black);
+    background-color: var(--main-white);
+    background-repeat:no-repeat;
+    padding: 15px 35px;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    transition: .5s;
+    font-size: .8rem;
+    border: none;
+    opacity: 1;
+      
+}
+  
+button:hover {
+    cursor: pointer;
+    color: var(--main-white);
+    background-color: #6d6d6d;
+    opacity: .8;
+}
+
+
+h2, h3, h4, h5 {
+    color: var(--main-white);
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 100;
+}
+
+.about-me, .hey-iamdezso {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.who-am-i {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/*-----Lifestyle-Commercial-Wildlife Section-----*/
+
+
+
+.lifestyle-commercial-wildlife {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    grid-template-rows: repeat(2, 1fr) auto;
+    max-width: 100%;
+    height: 800px;
+}
+
+.lifestyle {
+    position: relative;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.lifestyle > img {
+    /* display: block; */
+    height: 800px;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.lifestyle > .content-lifestyle {
+    position: absolute;
+    inset: 0;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.lifestyle > img,
+.lifestyle > .content-lifestyle {
+    transition: 1s;
+}
+
+.lifestyle:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.lifestyle > .content-lifestyle.fade {
+    opacity: 0;
+}
+
+.lifestyle:hover > .content-lifestyle.fade {
+    opacity: 1;
+}
+
+.commercial {
+    position: relative;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.commercial > img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.commercial > .content-commercial {
+    position: absolute;
+    inset: 0;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.commercial > img,
+.commercial > .content-commercial {
+    transition: 1s;
+}
+
+.commercial:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.commercial > .content-commercial.fade {
+    opacity: 0;
+}
+
+.commercial:hover > .content-commercial.fade {
+    opacity: 1;
+}
+
+.wildlife {
+    position: relative;
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wildlife > img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.wildlife > .content-wildlife {
+    position: absolute;
+    inset: 0;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.wildlife > img,
+.wildlife > .content-wildlife {
+    transition: 1s;
+}
+
+.wildlife:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.wildlife > .content-wildlife.fade {
+    opacity: 0;
+}
+
+.wildlife:hover > .content-wildlife.fade {
+    opacity: 1;
+}
+
+
+
+/*---Portraits-Landscapes Section---*/
+
+
+
+.portraits-landscapes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    grid-template-rows: repeat(2, 1fr) auto;
+    width: 100%;
+    height: 800px;
+}
+
+.portraits {
+    position: relative;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portraits > img {
+    display: block;
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.portraits > .content-portraits {
+    position: absolute;
+    inset: 0;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.portraits > img,
+.portraits > .content-portraits {
+    transition: 1s;
+}
+
+.portraits:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.portraits > .content-portraits.fade {
+    opacity: 0;
+}
+
+.portraits:hover > .content-portraits.fade {
+    opacity: 1;
+}
+
+.landscapes {
+    position: relative;
+    grid-column: 3 / 6;
+    grid-row: 1 / 3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.landscapes > img {
+    display: block;
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.landscapes > .content-landscapes {
+    position: absolute;
+    inset: 0;
+    font-size: 2.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.landscapes > img,
+.landscapes > .content-landscapes {
+    transition: 1s;
+}
+
+.landscapes:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.landscapes > .content-landscapes.fade {
+    opacity: 0;
+}
+
+.landscapes:hover > .content-landscapes.fade {
+    opacity: 1;
+}
+
+/*---Mygoal---*/
+
+.my-goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: var(--main-black);
+    color: var(--main-white);
+    text-align: center;
+}
+
+.goal {
+    width: 45%;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+
+/*----Get in touch section----*/
+
+.get-in-touch {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.get-in-touch > img {
+    display: block;
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    transition: 1.5s;
+}
+
+.get-in-touch:hover > img.blur {
+    transform: scale(1.03);
+}
+
+.getintouch-text {
+    position: absolute;
+    inset: 0;
+    padding: 5rem;
+    line-height: 5rem;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--main-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.getintouch-text > h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.getintouch-text > h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+
+
+/*------My Work Section----*/
+
+
+.mywork-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.mywork {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 150px;
+    width: 70vw;
+    height: 300px;
+    color: var(--main-white);
+    line-height: 3rem;
+}
+
+.mywork > h5 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.2rem;
+}
+
+.mywork > h2 {
+    font-size: 3rem;
+}
+
+.mywork > .fa-arrow-right-long {
+    padding: 2rem 60%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.mywork > .fa-arrow-right-long:hover {
+    opacity: 1;
+}
+
+.fa-arrow-right-long {
+    padding: 50px 0px;
+}
+
+
+/*-------FOOTER-------*/
+
+footer {
+    margin-bottom: 50px;
+}
+.footer-navbar-arrowup {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-navbar, .footer-arrowup {
+    display: flex;
+    padding: 50px 40px;
+}
+
+.footer-navbar > a {
+    text-decoration: none;
+    padding: 0px 20px;
+    color: var(--main-white);
+    transition: .5s;
+    font-size: 1.2rem;
+}
+
+.footer-navbar > a:hover {
+    color: var(--main-grey);
+}
+
+.fa-arrow-up-long {
+    color: var(--main-white);
+    justify-self: flex-start;
+    transition: .5s;
+}
+
+.fa-arrow-up-long:hover {
+    color: var(--main-grey);
+}
+
+.footer-copyright-social {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    color: var(--main-white);
+    font-size: .8rem;
+}
+
+.social {
+    display: flex;
+}
+
+.social > a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    color: var(--main-white);
+    transition: .5s;
+}
+
+.social > a:hover {
+    color: var(--main-grey);
+}
+
+.social > img {
+    border: 0;
+    width: 50px;
+    height: 23px;
+    transition: .3s;
+}
+
+.social > img:hover {
+    opacity: .7;
+}
+
+.poweredbydtp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-white);
+    width: 100%;
+    height: 38px;
+    background-color: var(--main-darkgrey);
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+}
+
+.poweredbydtp button {
+    font-size: 1.3rem;
+    padding: 0 2px;
+    background-color: var(--main-darkgrey);
+    color: var(--main-white);
+    transition: .5s;
+}
+
+.poweredbydtp button:hover {
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+.powered {
+    font-size: .7rem;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .main-header {
+        min-height: 780px;
+    }
+
+@media only screen and (max-width: 1405px) {
+    .main-header {
+        min-height: 680px;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .main-header {
+    min-height: 580px;
+    }
+
+    .header-div-left {
+        margin-left: 40px;
+    }
+
+    .header-div-right {
+        margin-right: 40px;
+    }
+
+   .header-a {
+    font-size: 1rem;
+   }
+
+    .header-span {
+    font-size: 1.2rem;
+    }
+    .header-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    }
+    .about-container {
+        height: 600px;
+    }
+
+    .about-text {
+        height: 600px;
+    }
+    
+    .about-img {
+        min-height: 600px;
+    }
+
+    .lifestyle-commercial-wildlife {
+        height: 600px;
+    }
+
+    .lifestyle > img {
+        height: 600px;
+    }
+
+    .commercial > img {
+        height: 300px;
+    }
+
+    .wildlife > img {
+        height: 300px;
+    }
+
+    .portraits-landscapes {
+        height: 600px;
+    }
+
+    .portraits > img {
+        height: 600px;
+    }
+
+    .landscapes > img {
+        height: 600px;
+    }
+    .my-goal {
+        height: 500px;
+    }
+
+    .goal {
+        width: 50%;
+        font-size: 1.6rem;
+    }
+
+    .get-in-touch {
+        height: 500px;
+    }
+
+    .get-in-touch > img {
+        height: 500px;
+    }
+
+    .getintouch-text > h2 {
+        font-size: 2rem;
+        letter-spacing: .1rem;
+    }
+
+    .getintouch-text > h3 {
+        font-size: .8rem;
+    }
+
+    .mywork-container {
+        height: 50vh;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .main-header {
+    min-height: 480px;
+    }
+
+    .header-div-left {
+        margin-left: 30px;
+    }
+
+    .header-div-right {
+        margin-right: 30px;
+    }
+
+   .header-a {
+        font-size: .8rem;
+   }
+
+    .header-span {
+        font-size: 1rem;
+    }
+    .header-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /*   ABOUT   */
+    .about-container {
+        height: 520px;
+    }
+
+    .about-text {
+        height: 520px;
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+    
+    .about-img {
+        min-height: 520px;
+    }
+
+    .about-me, .hey-iamdezso {
+        margin-bottom: 1rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+
+    .who-am-i {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .lifestyle > .content-lifestyle {
+        font-size: 2rem;
+    }
+
+    .commercial > .content-commercial {
+        font-size: 2rem;
+    }
+
+    .wildlife > .content-wildlife{
+        font-size: 2rem;
+    }
+
+    .lifestyle-commercial-wildlife {
+        height: 520px;
+    }
+
+    .portraits > .content-portraits {
+        font-size: 2rem;
+    }
+
+    .landscapes > .content-landscapes {
+        font-size: 2rem;
+    }
+
+    .lifestyle > img {
+        height: 520px;
+    }
+
+    .commercial > img {
+        height: 260px;
+    }
+
+    .wildlife > img {
+        height: 260px;
+    }
+
+    .portraits-landscapes {
+        height: 520px;
+    }
+
+    .portraits > img {
+        height: 520px;
+    }
+
+    .landscapes > img {
+        height: 520px;
+    }
+    .my-goal {
+        height: 400px;
+    }
+
+    .goal {
+        width: 50%;
+        font-size: 1.6rem;
+    }
+
+    .get-in-touch {
+        height: 450px;
+    }
+
+    .get-in-touch > img {
+        height: 450px;
+    }
+
+    .mywork-container {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-header {
+        min-height: 300px;
+    }
+
+    .header-div-left {
+        margin: 10px;
+        gap: 8px;
+    }
+
+    .header-div-right {
+        margin: 10px;
+        gap: 8px;
+    }
+
+    .header-a {
+        font-size: .8rem;
+        
+    }
+    
+    .middle {
+        line-height: 2;
+    }
+
+    .header-div-title {
+        margin: 0;
+    }
+    .header-span {
+        visibility: hidden;
+    }
+
+    .header-title {
+        font-size: 1rem;
+    }
+    
+    /*   ABOUT   */
+    .about-container {
+        height:380px;
+    }
+    
+    .about-text {
+        height: 380px;
+        padding-left: 30px;
+        padding-right: 15px;
+        line-height: 1.5rem;
+    }
+        
+    .about-img {
+        min-height: 380px;
+    }
+    
+    .about-me, .hey-iamdezso {
+        margin-bottom: .5rem;
+        font-size: .6rem;
+        text-transform: uppercase;
+    }
+    
+    .who-am-i {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 5px;
+        font-size: .6rem;
+    }
+
+    .lifestyle > .content-lifestyle {
+        font-size: 1.6rem;
+    }
+
+    .commercial > .content-commercial {
+        font-size: 1.6rem;
+    }
+
+    .wildlife > .content-wildlife{
+        font-size: 1.6rem;
+    }
+
+    .lifestyle-commercial-wildlife {
+        height: 380px;
+    }
+    
+    .portraits > .content-portraits {
+        font-size: 1.6rem;
+    }
+
+    .landscapes > .content-landscapes {
+        font-size: 1.6rem;
+    }
+
+    .lifestyle > img {
+        height: 380px;
+    }
+
+    .commercial > img {
+        height: 190px;
+    }
+
+    .wildlife > img {
+        height: 190px;
+    }
+
+    .portraits-landscapes {
+        height: 380px;
+    }
+
+    .portraits > img {
+        height: 380px;
+    }
+    
+    .landscapes > img {
+        height: 380px;
+    }
+    .my-goal {
+        height: 350px;
+    }
+
+    .goal {
+        width: 50%;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    .get-in-touch {
+        height: 380px;
+    }
+
+    .get-in-touch > img {
+        height: 380px;
+    }
+
+    .getintouch-text {
+        padding: 2rem;
+        line-height: 3rem;
+    }
+
+    .getintouch-text > h2 {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+    .mywork-container {
+        height: 30vh;
+    }
+
+    .mywork {
+        margin: 0;
+        height: 200px;
+    }
+     .mywork > h5 {
+        font-size: .8rem;
+    }
+
+    .mywork > h2 {
+        font-size: 2rem;
+    }
+
+    /*****************/
+    /*    FOOTER     */
+    /*****************/
+
+
+    
+    .footer-navbar-arrowup {
+        padding: 5px;
+    }
+
+    .footer-navbar {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .footer-navbar > a {
+        font-size: .9rem;
+    }
+
+    .footer-arrowup {
+        padding: 10px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 20px;
+    }
+
+    .footer-copyright-social {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .main-header {
+        min-height: 250px;
+    }
+
+    .header-div-left {
+        margin: 5px;
+    }
+
+    .header-div-right {
+        margin: 5px;
+    }
+
+    .header-a {
+        font-size: .7rem;
+    }
+    
+    .middle {
+        line-height: .5;
+    }
+
+    .header-div-title {
+        margin: 0;
+    }
+    
+    .header-title {
+        font-size: 1rem;
+    }
+    
+    /*   ABOUT   */
+    .about-container {
+        height:360px;
+    }
+    
+    .about-text {
+        height: 360px;
+        padding-left: 30px;
+        padding-right: 15px;
+        line-height: 1.5rem;
+    }
+        
+    .about-img {
+        min-height: 360px;
+    }
+    
+    .about-me, .hey-iamdezso {
+        margin-bottom: .5rem;
+        font-size: .6rem;
+        text-transform: uppercase;
+    }
+    
+    .who-am-i {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 5px;
+        font-size: .6rem;
+    }
+
+    .lifestyle > .content-lifestyle {
+        font-size: 1.4rem;
+    }
+
+    .commercial > .content-commercial {
+        font-size: 1.4rem;
+    }
+
+    .wildlife > .content-wildlife{
+        font-size: 1.4rem;
+    }
+
+    .lifestyle-commercial-wildlife {
+        height: 360px;
+    }
+    
+    .portraits > .content-portraits {
+        font-size: 1.4rem;
+    }
+
+    .landscapes > .content-landscapes {
+        font-size: 1.4rem;
+    }
+
+    .lifestyle > img {
+        height: 360px;
+    }
+
+    .commercial > img {
+        height: 180px;
+    }
+
+    .wildlife > img {
+        height: 180px;
+    }
+
+    .portraits-landscapes {
+        height: 360px;
+    }
+
+    .portraits > img {
+        height: 360px;
+    }
+    
+    .landscapes > img {
+        height: 360px;
+    }
+    .my-goal {
+        height: 340px;
+    }
+
+    .goal {
+        width: 60%;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .get-in-touch {
+        height: 300px;
+    }
+
+    .get-in-touch > img {
+        height: 300px;
+    }
+
+    .getintouch-text {
+        padding: 1.4rem;
+        line-height: 3rem;
+    }
+
+    .getintouch-text > h2 {
+        font-size: 1.3rem;
+        letter-spacing: normal;
+    }
+    .mywork-container {
+        height: 30vh;
+    }
+
+    .mywork {
+        margin: 0;
+        height: 200px;
+    }
+     .mywork > h5 {
+        font-size: .8rem;
+    }
+
+    .mywork > h2 {
+        font-size: 2rem;
+    }
+
+    /*****************/
+    /*    FOOTER     */
+    /*****************/
+
+
+    
+    .footer-navbar-arrowup {
+        padding: 5px;
+    }
+
+    .footer-navbar {
+        padding: 5px;
+        align-items: center;
+    }
+
+    .footer-navbar > a {
+        font-size: .9rem;
+        padding: 0 5px;
+    }
+
+    .footer-arrowup {
+        padding: 10px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 20px;
+    }
+
+    .social_w > img {
+        width: 44px;
+        height: 20px;
+        padding-top: 4px;
+        transition: .3s;
+    }
+    
+    .social_w > img:hover {
+        opacity: .7;
+    }
+
+    .social > a {
+        padding: 5px;
+        margin: 0;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+    .footer-copyright-social {
+        padding: 5px;
+    }
+    .footer-navbar-arrowup {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .poweredbydtp {
+        height: 30px;
+    }
+
+    .poweredbydtp button {
+        font-size: .8rem;
+    }
+
+    .poweredbydtp button:hover {
+        font-size: 1rem;
+    }
+
+    .powered {
+        font-size: .6rem;
+    }
+}
