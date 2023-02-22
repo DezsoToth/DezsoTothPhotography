@@ -638,17 +638,6 @@ footer {
     color: var(--main-grey);
 }
 
-.social > img {
-    border: 0;
-    width: 50px;
-    height: 23px;
-    transition: .3s;
-}
-
-.social > img:hover {
-    opacity: .7;
-}
-
 .poweredbydtp {
     display: flex;
     justify-content: center;
