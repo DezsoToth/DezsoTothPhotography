@@ -673,6 +673,7 @@ footer {
     .main-header {
         min-height: 780px;
     }
+}
 
 @media only screen and (max-width: 1405px) {
     .main-header {
