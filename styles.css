@@ -1277,17 +1277,6 @@ footer {
         font-size: 20px;
     }
 
-    .social_w > img {
-        width: 44px;
-        height: 20px;
-        padding-top: 4px;
-        transition: .3s;
-    }
-    
-    .social_w > img:hover {
-        opacity: .7;
-    }
-
     .social > a {
         padding: 5px;
         margin: 0;
